@@ -3,361 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikram Singh - Training & Digital Marketing Specialist</title>
+    <title>Vikram Singh - Training & Cloud Specialist</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* General Styles */
+        /* Custom Styles & Configuration */
+        :root {
+            --primary-color: #00796b; /* Dark Teal */
+            --secondary-color: #004d40; /* Darker Green/Teal */
+            --bg-light: #f4f7f6;
+            --text-dark: #2c3e50; /* Dark Blue Text */
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
         }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            border-radius: 8px;
+        .header-bg {
+            background-color: #34495e; /* Dark header background */
         }
-
-        /* Header & Contact */
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #00796b; /* Dark Teal Accent */
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #00796b;
-            margin-bottom: 5px;
-            font-size: 2.5em;
-        }
-
-        .header h2 {
-            color: #555;
-            font-weight: 400;
-            margin-top: 0;
-            font-size: 1.3em;
-        }
-
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 15px;
-            font-size: 0.9em;
-        }
-
-        .contact-info li {
-            margin: 0 15px;
-            color: #777;
-        }
-
-        .contact-info a {
-            color: #00796b;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Styles */
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed #ddd;
-        }
-
         .section-title {
-            color: #004d40; /* Darker Teal */
-            border-left: 5px solid #00796b;
-            padding-left: 10px;
-            margin-bottom: 15px;
-            font-size: 1.6em;
-            font-weight: 600;
+            border-left-color: var(--primary-color);
+            color: var(--secondary-color);
         }
-
-        /* Summary & Skills */
-        .summary p {
-            font-style: italic;
-            color: #444;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills-list h4 {
-            color: #00796b;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 3px;
-        }
-
-        .skills-list ul {
-            list-style: none;
-            padding-left: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .skills-list li {
-            background-color: #e0f2f1; /* Light Teal background */
-            color: #004d40;
-            padding: 5px 10px;
-            margin: 5px 10px 5px 0;
-            border-radius: 4px;
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-
-        /* Experience */
-        .job {
-            margin-bottom: 25px;
-            border-left: 3px solid #ccc;
-            padding-left: 15px;
-        }
-
         .job-title {
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 2px;
-            font-size: 1.2em;
-        }
-
-        .company-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .job-details li {
-            margin-bottom: 8px;
-            padding-left: 5px;
-        }
-
-        /* Education & Certifications */
-        .education-item {
-            margin-bottom: 15px;
-        }
-
-        .degree {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .institution {
-            color: #00796b;
-            font-style: italic;
-        }
-
-        .certifications-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .certifications-list li {
-            background-color: #f1f8e9; /* Light Green for Certs */
-            color: #333;
-            padding: 5px 10px;
-            margin: 5px 10px 5px 0;
-            border-radius: 4px;
-            font-size: 0.9em;
-            border: 1px solid #c8e6c9;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
-
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-info li {
-                margin: 5px 0;
-            }
-
-            .company-info {
-                flex-direction: column;
-            }
+            color: var(--primary-color);
         }
     </style>
 </head>
 <body>
-    <div class="container">
 
-        <header class="header">
-            <h1>Vikram Singh</h1>
-            <h2>Training & Digital Marketing Specialist | [cite_start]Cloud Architect [cite: 1, 2]</h2>
-            <ul class="contact-info">
-                [cite_start]<li>Delhi, India [cite: 3]</li>
-                [cite_start]<li>Phone: +91-7982748767 [cite: 3]</li>
-                [cite_start]<li>Email: <a href="mailto:vikram.singh165@gmail.com">vikram.singh165@gmail.com</a> [cite: 3]</li>
-                [cite_start]<li>LinkedIn: <a href="https://linkedin.com/in/vikram-singh-41b600ab" target="_blank">linkedin.com/in/vikram-singh-41b600ab</a> [cite: 3]</li>
+    <div class="header-bg py-8 shadow-xl">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-1">Vikram Singh</h1>
+            <h2 class="text-xl sm:text-2xl font-light opacity-80 mb-4">Training & Digital Marketing Specialist | Cloud Architect</h2>
+            
+            <!-- Contact Info -->
+            <ul class="flex flex-wrap justify-center text-sm sm:text-base font-medium">
+                <li class="mx-3 my-1">Delhi, India</li>
+                <li class="mx-3 my-1">
+                    <a href="tel:+917982748767" class="hover:text-cyan-300 transition">+91-7982748767</a>
+                </li>
+                <li class="mx-3 my-1">
+                    <a href="mailto:vikram.singh165@gmail.com" class="hover:text-cyan-300 transition">vikram.singh165@gmail.com</a>
+                </li>
+                <li class="mx-3 my-1">
+                    <a href="https://linkedin.com/in/vikram-singh-41b600ab" target="_blank" class="hover:text-cyan-300 transition">LinkedIn Profile</a>
+                </li>
             </ul>
-        </header>
+        </div>
+    </div>
 
-        <section class="section summary">
-            [cite_start]<h3 class="section-title">Summary [cite: 4]</h3>
-            [cite_start]<p>I am a results-driven IT professional with over 9 years of diverse experience in IT-enabled services (ITES), digital marketing, and cloud architecture[cite: 5]. [cite_start]Specializing in customer care operations, strategic digital initiatives, and technical support, I possess a unique blend of skills that drive measurable improvements and foster innovation[cite: 6]. [cite_start]My expertise includes leading high-performing teams, optimizing complex processes, and achieving exceptional campaign performance, consistently exceeding SLAs and maintaining a First Call Resolution (FCR) rate above 90%[cite: 7]. [cite_start]Adept at translating business goals into actionable strategies, I am passionate about leveraging cutting-edge technology, including Generative AI LLMs, to enhance learning experiences and operational efficiencies[cite: 8].</p>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-12">
+        
+        <!-- Summary Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h3 class="section-title text-2xl font-semibold border-l-4 pl-3 mb-4">Summary</h3>
+            <p class="text-gray-700 italic">
+                I am a results-driven IT professional with over **9 years of diverse experience** in IT-enabled services (ITES), digital marketing, and cloud architecture. Specializing in customer care operations, strategic digital initiatives, and technical support, I possess a unique blend of skills that drive measurable improvements and foster innovation. My expertise includes leading high-performing teams, optimizing complex processes, and achieving exceptional campaign performance, consistently exceeding SLAs and maintaining a **First Call Resolution (FCR) rate above 90%**. Adept at translating business goals into actionable strategies, I am passionate about leveraging cutting-edge technology, including **Generative AI LLMs**, to enhance learning experiences and operational efficiencies.
+            </p>
         </section>
 
-        <section class="section skills">
-            [cite_start]<h3 class="section-title">Skills [cite: 9]</h3>
-            <div class="skills-list">
-                [cite_start]<h4>Core Competencies [cite: 10]</h4>
-                <ul>
-                    [cite_start]<li>Team Leadership & Mentoring [cite: 10]</li>
-                    [cite_start]<li>Process Optimization & Management [cite: 10]</li>
-                    [cite_start]<li>Customer Operations & Consultation [cite: 10]</li>
-                    [cite_start]<li>Stakeholder Management [cite: 10]</li>
-                    [cite_start]<li>Project Coordination [cite: 10]</li>
-                    [cite_start]<li>Strategic Planning [cite: 10]</li>
-                    [cite_start]<li>Analytical & Problem Solving [cite: 10]</li>
-                    [cite_start]<li>Training & Coaching [cite: 10]</li>
-                </ul>
-
-                [cite_start]<h4>Digital Marketing (Google Ads Expertise - 7+ Years as Vendor) [cite: 11]</h4>
-                <ul>
-                    [cite_start]<li>Google Ads Mastery (Account Creation, all campaign types, Optimization, Troubleshooting, Performance Analysis, Strategy Development) [cite: 12]</li>
-                    [cite_start]<li>Google Analytics, GTM, Google Search Console, Google Workspace, Google Marketing Platform [cite: 13]</li>
-                    [cite_start]<li>Performance Marketing [cite: 14]</li>
-                    [cite_start]<li>Audience Segmentation & Research [cite: 14]</li>
-                    [cite_start]<li>Keyword/Bid Optimization [cite: 14]</li>
-                    [cite_start]<li>ROI Analysis & Reporting [cite: 14]</li>
-                    [cite_start]<li>Web Designing (HTML, CSS) [cite: 15]</li>
-                    [cite_start]<li>SEO [cite: 15]</li>
-                    [cite_start]<li>Digital Marketing Strategy [cite: 15]</li>
-                </ul>
-
-                [cite_start]<h4>Technical Proficiency [cite: 16]</h4>
-                <ul>
-                    [cite_start]<li>**Cloud Architecture:** Microsoft Azure (Fundamentals, AZ-303, AZ-305 Architect) [cite: 18]</li>
-                    [cite_start]<li>AWS (Solutions Architect - Associate) [cite: 18]</li>
-                    [cite_start]<li>Google Cloud Platform Architect (GCP) [cite: 18]</li>
-                    [cite_start]<li>IT Support & Troubleshooting [cite: 19]</li>
-                    [cite_start]<li>Network & Hardware/Software Configuration [cite: 19]</li>
-                    [cite_start]<li>**Programming:** Advance Java, Dot.Net, Unix, SQL [cite: 19]</li>
-                </ul>
+        <!-- Skills Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h3 class="section-title text-2xl font-semibold border-l-4 pl-3 mb-6">Skills & Expertise</h3>
+            
+            <!-- Core Competencies -->
+            <h4 class="text-xl font-bold text-gray-800 mb-2 border-b pb-1">Core Competencies</h4>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Team Leadership & Mentoring</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Process Optimization</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Stakeholder Management</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Training & Coaching</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Analytical & Problem Solving</span>
             </div>
-        </section>
-
-        <section class="section experience">
-            [cite_start]<h3 class="section-title">Experience [cite: 20]</h3>
-
-            <div class="job">
-                <div class="company-info">
-                    [cite_start]<strong>Cognizant</strong>, Gurugram, Haryana, India [cite: 21]
-                    <span>**Training Specialist** | [cite_start]May 2025 - Present (5 months) [cite: 22]</span>
-                </div>
-                <ul class="job-details">
-                    [cite_start]<li>Designed and delivered high-impact training sessions on new products, policies, and procedures[cite: 23].</li>
-                    [cite_start]<li>Pioneered the integration of **Generative AI LLMs** to create hyper-personalized learning experiences and significantly improve operational efficiencies[cite: 24].</li>
-                    [cite_start]<li>Collaborated with business partners to define optimal training strategies that align with product launches and workflow enhancements[cite: 25].</li>
-                    [cite_start]<li>Led the end-to-end development and implementation of comprehensive curricular frameworks for all **Google Ads training**, directly contributing to business growth[cite: 27].</li>
-                    [cite_start]<li>Managed training development timelines, oversaw instructional design, and coordinated delivery to ensure timely and effective employee upskilling[cite: 28].</li>
-                </ul>
+            
+            <!-- Digital Marketing -->
+            <h4 class="text-xl font-bold text-gray-800 mb-2 border-b pb-1">Digital Marketing (7+ Years Google Ads Vendor Expertise)</h4>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Google Ads Mastery</span>
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Performance Marketing</span>
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">ROI Analysis & Reporting</span>
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Google Analytics, GTM, Search Console</span>
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Keyword/Bid Optimization</span>
+                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Web Designing (HTML, CSS) & SEO</span>
             </div>
 
-            <div class="job">
-                <div class="company-info">
-                    [cite_start]<strong>Cognizant</strong>, Gurugram, Haryana, India [cite: 29]
-                    <span>**Process Specialist** | [cite_start]July 2022 - Present (3 years 3 months) [cite: 30]</span>
-                </div>
-                <ul class="job-details">
-                    [cite_start]<li>Led and mentored a team of professionals to consistently achieve project goals and deliverables[cite: 31].</li>
-                    [cite_start]<li>Orchestrated cross-functional collaborations to ensure strategic alignment and efficient execution[cite: 34].</li>
-                    [cite_start]<li>Developed and implemented innovative strategies that elevate team efficiency, productivity, and overall collaboration[cite: 35].</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="company-info">
-                    [cite_start]<strong>Cognizant</strong>, Gurugram, Haryana, India [cite: 37]
-                    <span>**Senior Process Executive** | [cite_start]January 2019 - July 2022 (3 years 7 months) [cite: 38]</span>
-                </div>
-                <ul class="job-details">
-                    [cite_start]<li>Successfully onboarded and educated new-to-Google customers, guiding them in aligning business objectives with sustainable **Google advertising solutions**[cite: 40].</li>
-                    [cite_start]<li>Provided expert strategic best practices and recommendations for diverse marketing campaigns (Search, Display, Video, App)[cite: 41].</li>
-                    [cite_start]<li>Managed and optimized performance-driven campaigns across Google Ads, ensuring maximum **ROI**[cite: 43].</li>
-                    [cite_start]<li>Conducted in-depth audience research and segmentation to create highly targeted and effective campaigns[cite: 46].</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="company-info">
-                    [cite_start]<strong>Accenture</strong>, Gurgaon, India [cite: 49]
-                    <span>**Customer Service Associate** | [cite_start]December 2018 - January 2019 (2 months) [cite: 50]</span>
-                </div>
-                <ul class="job-details">
-                    [cite_start]<li>Assisted users with the **Google Pay App**, resolving queries related to its features and functionality[cite: 51].</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <div class="company-info">
-                    [cite_start]<strong>Quatrro</strong>, Gurgaon, India [cite: 52]
-                    <span>**Solutions Engineer** | [cite_start]March 2018 - October 2018 (8 months) [cite: 53]</span>
-                </div>
-                <ul class="job-details">
-                    [cite_start]<li>Served as a primary point of contact for technical assistance, performing remote troubleshooting and providing solutions[cite: 54].</li>
-                    [cite_start]<li>Consistently exceeded service level agreements (SLAs), maintaining an **FCR rate above 90%**[cite: 55].</li>
-                    [cite_start]<li>Installed and configured computer hardware, software, networks, printers, and scanners[cite: 58].</li>
-                </ul>
+            <!-- Technical Proficiency -->
+            <h4 class="text-xl font-bold text-gray-800 mb-2 border-b pb-1">Technical Proficiency</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Microsoft Azure Architect (AZ-303, AZ-305)</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">AWS Solutions Architect - Associate</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Google Cloud Platform (GCP) Architect</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Advanced Java, Dot.Net, Unix, SQL</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">IT Support & Network Configuration</span>
             </div>
         </section>
 
-        <section class="section education">
-            [cite_start]<h3 class="section-title">Education [cite: 70]</h3>
-            <div class="education-item">
-                <div class="degree">M.Sc, Information Technology | 2007-2014 | [cite_start]Graduated with 7.61 OGPA [cite: 72]</div>
-                [cite_start]<div class="institution">Annamalai University [cite: 71]</div>
+        <!-- Experience Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h3 class="section-title text-2xl font-semibold border-l-4 pl-3 mb-6">Professional Experience</h3>
+
+            <!-- Cognizant: Training Specialist -->
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="flex justify-between items-start flex-wrap">
+                    <h4 class="job-title text-lg font-semibold">Training Specialist, Cognizant</h4>
+                    <span class="text-sm text-gray-500 font-medium mt-1 sm:mt-0">May 2025 - Present (5 months)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Gurugram, Haryana, India</p>
+                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-700 text-sm">
+                    <li>Pioneered the integration of **Generative AI LLMs** to create hyper-personalized learning experiences and significantly improve operational efficiencies.</li>
+                    <li>Led the end-to-end development and implementation of comprehensive curricular frameworks for all **Google Ads training**, directly contributing to business growth.</li>
+                    <li>Designed and delivered high-impact training sessions on new products, policies, and procedures.</li>
+                    <li>Managed training development timelines, instructional design, and coordinated delivery.</li>
+                </ul>
             </div>
-            <div class="education-item">
-                <div class="degree">Senior Secondary, Mathematics and Computer Science | [cite_start]2003-2005 [cite: 74]</div>
-                <div class="institution">Govt. Modal.Senior. Secondary School. [cite_start]Little Andaman [cite: 73]</div>
+            
+            <!-- Cognizant: Process Specialist -->
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="flex justify-between items-start flex-wrap">
+                    <h4 class="job-title text-lg font-semibold">Process Specialist, Cognizant</h4>
+                    <span class="text-sm text-gray-500 font-medium mt-1 sm:mt-0">July 2022 - Present (3 years 3 months)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Gurugram, Haryana, India</p>
+                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-700 text-sm">
+                    <li>Led and mentored a team of professionals to consistently achieve project goals and deliverables.</li>
+                    <li>Orchestrated cross-functional collaborations to ensure strategic alignment and efficient execution.</li>
+                    <li>Developed and implemented innovative strategies that elevate team efficiency, productivity, and overall collaboration.</li>
+                </ul>
             </div>
+
+            <!-- Cognizant: Senior Process Executive -->
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="flex justify-between items-start flex-wrap">
+                    <h4 class="job-title text-lg font-semibold">Senior Process Executive, Cognizant</h4>
+                    <span class="text-sm text-gray-500 font-medium mt-1 sm:mt-0">Jan 2019 - Jul 2022 (3 years 7 months)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Gurugram, Haryana, India</p>
+                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-700 text-sm">
+                    <li>Successfully onboarded and educated new-to-Google customers, guiding them with sustainable **Google advertising solutions**.</li>
+                    <li>Provided expert strategic best practices and recommendations for diverse marketing campaigns.</li>
+                    <li>Managed and optimized performance-driven campaigns across Google Ads, ensuring maximum **ROI**.</li>
+                    <li>Conducted in-depth audience research and segmentation to create highly targeted campaigns.</li>
+                </ul>
+            </div>
+            
+            <!-- Quatrro: Solutions Engineer -->
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <div class="flex justify-between items-start flex-wrap">
+                    <h4 class="job-title text-lg font-semibold">Solutions Engineer, Quatrro</h4>
+                    <span class="text-sm text-gray-500 font-medium mt-1 sm:mt-0">Mar 2018 - Oct 2018 (8 months)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Gurgaon, India</p>
+                <ul class="list-disc list-outside ml-5 space-y-1 text-gray-700 text-sm">
+                    <li>Served as a primary point of contact for technical assistance, performing remote troubleshooting.</li>
+                    <li>Consistently exceeded SLAs, maintaining an **FCR rate above 90%**.</li>
+                    <li>Installed and configured computer hardware, software, networks, printers, and scanners.</li>
+                </ul>
+            </div>
+            
+            <!-- Other Relevant Experience (Summarized) -->
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h4 class="job-title text-lg font-semibold mb-2">Additional Relevant Experience:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div>
+                        <p><strong>Executive, ¡Energizer</strong> (Aug 2016 - Sep 2017)</p>
+                        <p class="ml-2">- Technical advisor for EA Worldwide Customer Experience (Xbox, PlayStation, PC).</p>
+                    </div>
+                    <div>
+                        <p><strong>Customer Service Associate, Accenture</strong> (Dec 2018 - Jan 2019)</p>
+                        <p class="ml-2">- Assisted users with the Google Pay App features and functionality.</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <section class="section certifications">
-            [cite_start]<h3 class="section-title">Licenses & Certifications [cite: 75]</h3>
-            <ul class="certifications-list">
-                [cite_start]<li>Google Ads Search [cite: 76]</li>
-                [cite_start]<li>Google Ads Measurement [cite: 76]</li>
-                [cite_start]<li>Google Analytics Individual Qualification [cite: 76]</li>
-                [cite_start]<li>Microsoft Azure: Architect Technologies (AZ-303) [cite: 77]</li>
-                [cite_start]<li>Microsoft Azure: Infrastructure Solutions (AZ-305) [cite: 77]</li>
-                [cite_start]<li>Microsoft Azure: Fundamentals [cite: 77]</li>
-                [cite_start]<li>Amazon Web Services (AWS): Solutions Architect - Associate [cite: 78]</li>
-                [cite_start]<li>Cloud Architect (Simplilearn) [cite: 79]</li>
-            </ul>
+        <!-- Education & Certifications Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h3 class="section-title text-2xl font-semibold border-l-4 pl-3 mb-6">Education & Certifications</h3>
+            
+            <!-- Education -->
+            <div class="mb-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2 border-b pb-1">Education</h4>
+                <div class="mb-3">
+                    <p class="font-semibold text-lg text-gray-800">M.Sc, Information Technology</p>
+                    <p class="text-gray-600">Annamalai University | 2007-2014 | Graduated with 7.61 OGPA</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-lg text-gray-800">Senior Secondary, Mathematics and Computer Science</p>
+                    <p class="text-gray-600">Govt. Model. Senior. Secondary School. Little Andaman | 2003-2005</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3 border-b pb-1">Licenses & Certifications</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-medium">Azure Architect (AZ-303, AZ-305, Fundamentals)</span>
+                    <span class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-medium">AWS Solutions Architect - Associate</span>
+                    <span class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-medium">Google Ads Search & Measurement</span>
+                    <span class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-medium">Google Analytics Individual Qualification</span>
+                    <span class="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-medium">GCP Architect & Cloud Architect (Simplilearn)</span>
+                </div>
+            </div>
         </section>
 
     </div>
 </body>
 </html>
-```

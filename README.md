@@ -1,5 +1,7 @@
 Vikram Singh
+
 Training & Digital Marketing Specialist | Cloud Architect
+
 Delhi, India | +91-7982748767 | vikram.singh165@gmail.com | linkedin.com/in/vikram-singh-41b600ab
 
 
